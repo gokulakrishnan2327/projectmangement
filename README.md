@@ -1,84 +1,92 @@
-# Project management system using MERN stack (Mongodb, Express.js, React.js and Node.js) 
+Project Management System (MERN Stack)
+A project management application built using the MERN stack: MongoDB, Express.js, React.js, and Node.js.
 
+🔧 Setup Instructions
+Step 1: Install Dependencies
+Navigate to the backend directory:
 
+bash
+Copy
+Edit
+cd backend
+npm install
+Navigate to the frontend directory:
 
-## Setup instruction
+bash
+Copy
+Edit
+cd frontend
+npm install
+Step 2: Configure Environment Variables
+In the backend directory, create a .env file and add:
 
-- Step 1: install dependencies/node_module
-  - Go to /backend directory for backend setup and run `npm install`
+ini
+Copy
+Edit
+MONGODB_PATH=your-mongodb-connection-url
+Step 3: Optional Server Config
+You can customize the server port and CORS origin by adding the following to your .env:
 
-  - Go to /frontend directory for frontend setup and run `npm install`
+ini
+Copy
+Edit
+SERVER_PORT=your-port
+CORS_ORIGIN=your-client-origin
+Step 4: Run the Project
+Start the backend server:
 
-- Step 2: Configure mongodb connection url
-Go to backend directory and create .env file 
-and put into `MONGODB_PATH=your-mongodb-connection-url`
+bash
+Copy
+Edit
+npm run serve
+Start the frontend application:
 
-- Step 3:  Change server port and cors origin (Optional)
-by default your server running in port `http://localhost:9000` and cors origin/frontend url is`http://localhost:3000` , you can change port and cors, simply put this key into your .env
-`SERVER_PORT=your-port` and` CORS_ORIGIN=-your-client-origin`
+bash
+Copy
+Edit
+npm start
+📦 Packages Used
+Frontend:
 
-- Step 4: Run project
-in your backend `npm run serve` for start node server and `npm run start` for frontend
+React
 
-## Packages used
-- Tailwindcss
-- Headlessui
-- React router
-- Axios
-- UUID
-- Joi
-- Cors
-- Dotenv
+React Router
 
+Axios
 
-## Project Screenshot
-#### Todo board quick preview
-![React-App](https://user-images.githubusercontent.com/96901635/191009449-0083044c-c961-45cd-9da4-7184289b9573.gif)
-#### Todo board
-![image](https://user-images.githubusercontent.com/96901635/191006996-0c185cdd-5834-47c6-8927-2e7d539866a7.png)
-#### Task insert
-![image](https://user-images.githubusercontent.com/96901635/191007092-eb25cfc8-c056-4be2-a898-00ad29d65785.png)
-#### Edit task
-![image](https://user-images.githubusercontent.com/96901635/191008217-6a0175e6-d5a9-4d98-8951-4a528d2bef99.png)
-#### Edit project
-![image](https://user-images.githubusercontent.com/96901635/191008043-8c9113a1-700f-42bb-9f87-e68db159c4dc.png)
+TailwindCSS
 
+Headless UI
 
+UUID
 
+Backend:
 
-## Available Scripts
+Express.js
 
-In the project directory, you can run:
+MongoDB
 
-### `npm start`
+Joi
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Cors
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Dotenv
 
-### `npm test`
+📜 Available Scripts (Frontend)
+In the frontend directory, you can use the following:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+npm start
+Runs the app in development mode at http://localhost:3000
 
-### `npm run build`
+npm test
+Runs the test runner in watch mode.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+npm run build
+Builds the app for production.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+📝 Notes
+Backend runs on port 9000 by default.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Frontend runs on port 3000 by default.
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Ensure MongoDB is running locally or provide a cloud-based connection string.
